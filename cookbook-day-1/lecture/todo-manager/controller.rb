@@ -16,22 +16,29 @@ class Controller
   end
 
   def list_tasks
+    # 1. get all the tasks from the repo
     tasks = @repository.all
+    # 2. display the tasks for the user
     @view.display_tasks(tasks)
   end
 
   def mark_as_done
-    # display the tasks to the user
+    # 1. display the tasks to the user
     list_tasks
-    # ask which task the user wants to mark => index
+    # 2. ask which task the user wants to mark => index
     index = @view.ask_for_index
-    # take the task in the repo
+    # 3. take the task in the repo
     task = @repository.find(index)
-    # mark it as done
+    # 4. mark it as done
     task.mark_as_done!
   end
 
   def remove_task
-
+    # 1. display the tasks to the user
+    list_tasks
+    # 2. ask which task the user wants to remove => index
+    index = @view.ask_for_index
+    # 3. remove it from the repository
+    @repository.remove(index)
   end
 end
