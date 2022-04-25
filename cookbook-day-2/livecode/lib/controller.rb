@@ -15,13 +15,15 @@ class Controller
     @view.display_recipes(recipes)
   end
 
-  def create
+ def create
     # 1. Ask the user for the name
     name = @view.ask_for("name")
-    # 2. Ask the user for the description
+    # 2. Ask the user for the description, rating and preparation time
     description = @view.ask_for("description")
+    rating = @view.ask_for("rating")
+    prep_time = @view.ask_for("preparation time")
     # 3. Create a new Recipe with the info
-    recipe = Recipe.new(name, description)
+    recipe = Recipe.new(name, description, rating, prep_time)
     # 4. Add the recipe to the cookbook
     @cookbook.add_recipe(recipe)
   end
