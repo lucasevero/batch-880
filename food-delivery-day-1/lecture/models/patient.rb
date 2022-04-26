@@ -1,13 +1,11 @@
 class Patient
-  attr_accessor :id
   # belongs to a room
-
-  # def initialize(name, cured) -> OLD WAY
-    # Patient.new("Dion") -> Wrong number of arguments
   attr_reader :name, :cured
-  attr_accessor :room # attr_reader + attr_writer
+  attr_accessor :room, :id # attr_reader + attr_writer
 
   def initialize(attr = {})
+    # def initialize(name, cured) -> OLD WAY
+    # Patient.new("Dion") -> Wrong number of arguments
     # STATE
     # name
     # cured

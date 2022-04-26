@@ -1,9 +1,9 @@
 require_relative 'patient'
 
 class Room
+  # has many patients
   attr_accessor :id
 
-  # has many patients
   class FullRoomError < Exception; end
 
   def initialize(attr = {})
