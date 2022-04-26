@@ -17,7 +17,7 @@ class PatientRepository
   end
 
   def save_csv
-    CSV.open(@csv_file, 'wb').each do |csv|
+    CSV.open(@csv_file, 'wb') do |csv|
       csv << [id, name, cured, room_id]
       @patients.each do |patient|
         csv << [ patient.id, patient.name, patient.cured, pacient.room.id ]
