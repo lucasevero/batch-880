@@ -8,7 +8,9 @@ class Customer
     @address = attr[:address]
   end
 
-  private
+  def prepare_to_save
+    [@id, @name, @address]
+  end
 
   def self.prepare_to_load(row)
     row[:id] = row[:id].to_i
@@ -17,9 +19,5 @@ class Customer
 
   def self.csv_headers
     ['id', 'name', 'address']
-  end
-
-  def self.prepare_to_save(customer)
-    [customer.id, customer.name, customer.address]
   end
 end

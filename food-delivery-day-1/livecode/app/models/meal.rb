@@ -8,7 +8,9 @@ class Meal
     @price = attr[:price]
   end
 
-  private
+  def prepare_to_save
+    [@id, @name, @price]
+  end
 
   def self.prepare_to_load(row)
     row[:id] = row[:id].to_i
@@ -18,9 +20,5 @@ class Meal
 
   def self.csv_headers
     ['id', 'name', 'price']
-  end
-
-  def self.prepare_to_save(meal)
-    [meal.id, meal.name, meal.price]
   end
 end
