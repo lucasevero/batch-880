@@ -1,4 +1,4 @@
-Heey beautiful, campers from Batch 880! 🤓
+Heey beautiful campers from Batch 880! 🤓
 
 
 Here you can find all the classes from our classes together on Cookbook, Food Delivery and Js Week.
