@@ -1,7 +1,7 @@
 Heey beautiful campers from Batch 880! 🤓
 
 
-Here you can find all the classes from our classes together on Cookbook, Food Delivery and Js Week.
+Here you can find all the lectures and livecodes from our classes together on Cookbook, Food Delivery and Js Week.
 
 Remember, you don't need to keep navegation through this folders on github. You can instead:
   - simply press the '.' key on your keyboard to open a VS Code enviroment in your browser with the code
