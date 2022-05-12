@@ -1,10 +1,13 @@
-// src/controllers/disable_button_controller.js
-
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ['button', 'link']
+  static targets = ['button', 'link'] // importante configuration to make `this.buttonTarget` available
 
+  // First thing when you create a controller
+  // 1. put the data-controller in the html
+  // 2. create the connect function and call a console.log("MY CONTROLLER IS CONNECTED")
+  // 3. after that, if you don't need to run anything when the DOM loads,
+    // you can get rid of the connect function all together 😉
   connect() {
     // console.log("Hello from our first Stimulus controller")
   }

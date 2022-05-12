@@ -7,6 +7,14 @@ const context = require.context("./controllers", true, /\.js$/)
 Stimulus.load(definitionsFromContext(context))
 
 
+// We used to have three diferent types of code in this folder
+  // one. Stimulus: disable_button_controller -> imported among ALL controllers in the 'controllers' directory
+  // two. A external package: sortable.js -> imported from the 'plugins' directory
+  // three. Custom code: the whole 'populate the movies list' logic -> hard coded in the index.js
+// After the refactor we just have Stimulus as now everyone has a separated controller
+
+// I'm keeping the old code in here so you can use it as reference 😎
+
 // // Sortable.js
 // import { initSortable } from "./plugins/init_sortable"
 // initSortable();

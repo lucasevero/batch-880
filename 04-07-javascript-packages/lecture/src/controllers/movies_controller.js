@@ -5,7 +5,7 @@ export default class extends Controller {
 
   connect() {
     // console.log('connected to the controller')
-    this.fetchMovies("harry potter"); // on 1st page load
+    this.fetchMovies("harry potter"); // load Harry Potter's posters as soon as we get to the page
   }
 
   insertMovies(data) {

@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- NEW DATA ATTRIBUTES: -->
+    <!-- data-controller="CONTROLLER_NAME" // it's going to make this and all children elements in the scope of the controller -->
+    <!-- data-action="EVENT->CONTROLLER_NAME#FUNCTION" // taking the role of addEventListener -->
+    <!-- data-CONTROLLER_NAME-target="TARGET_NAME" // taking the role of querySelector -->
+
     <div class="container text-center">
       <div data-controller="movies">
         <form class="row g-2 justify-content-center py-5" id="search-form"
@@ -32,7 +37,6 @@
                   data-disable-button-target="button">
             Click me!
           </button>
-          <!-- data-action="EVENT->CONTROLLER_NAME#FUNCTION" -->
           <a href="#" class="d-none ms-2"
               data-action="click->disable-button#reset"
               data-disable-button-target="link">Reset</a>
